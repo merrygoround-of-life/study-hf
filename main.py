@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from resnet_classify import classify_cat_image
 
 app = FastAPI()
 
@@ -8,6 +9,7 @@ async def root():
     return {"message": "Hello World"}
 
 
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
+
+@app.get("/classify")
+async def classify_image():
+    return classify_cat_image()
