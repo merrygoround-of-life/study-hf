@@ -6,7 +6,12 @@ Accept: application/json
 ###
 
 
-GET http://127.0.0.1:8000/classify
+GET http://127.0.0.1:8000/classify-image
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/classify-sentiment
 Accept: application/json
 
 ###
